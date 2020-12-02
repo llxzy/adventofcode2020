@@ -12,6 +12,7 @@ fn two_sum(values: &Vec<i32>) -> i32 {
     0
 }
 
+
 fn three_sum(values: &Vec<i32>) -> i32 {
     for i in 0..values.len() {
         for j in i+1..values.len() {
@@ -27,7 +28,7 @@ fn three_sum(values: &Vec<i32>) -> i32 {
 
 
 pub fn main() {
-    let filename = "day1_input.txt";
+    let filename = "./src/day1_input.txt";
     let input = read_to_string(filename).unwrap();
     let vals: Vec<i32> = input.split('\n').map(|x| x.trim().parse::<i32>().unwrap()).collect();
     println!("Day 1, part 1 answer: {}", two_sum(&vals));
