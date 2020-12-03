@@ -52,6 +52,6 @@ pub fn main() {
                     fs[1]);
         values.push(tpl); 
     }
-    println!("Day 2, part 1: {}", valid_passwords_one(&values));
-    println!("Day 2, part 2: {}", valid_passwords_two(&values));
+    println!("Day 2, part 1 answer: {}", valid_passwords_one(&values));
+    println!("Day 2, part 2 answer: {}", valid_passwords_two(&values));
 }
