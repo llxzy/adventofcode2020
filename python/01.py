@@ -12,7 +12,6 @@ def two_sum_to_2020():
                 return lines[i] * lines[j]
 
 
-# can be done with better complexity
 def three_sum_to_2020():
     for i in range(len(lines)):
         for j in range(i + 1, len(lines)):
@@ -21,5 +20,22 @@ def three_sum_to_2020():
                     return lines[i] * lines[j] * lines[k]
 
 
+def three_sum_alt():
+    lines.sort()
+    for i in range(len(lines)):
+        if i != 0 and lines[i] != lines[i-1]:
+            continue
+        j = i+1
+        k = len(lines) - 1
+        while j < k:
+            if lines[i] + lines[j] + lines[k] == target:
+                return lines[i] * lines[j] * lines[k]
+            elif lines[i] + lines[j] + lines[k] < target:
+                j += 1
+            else:
+                k -= 1
+
+
 print(two_sum_to_2020())
 print(three_sum_to_2020())
+print(three_sum_alt())
