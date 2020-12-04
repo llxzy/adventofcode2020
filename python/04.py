@@ -8,6 +8,7 @@ with open("day4_input.txt", 'r') as f:
     for a in l:
         lines.append(" ".join(a.split('\n')))
 
+
 pp_fields = [
     "byr",
     "iyr",
@@ -31,8 +32,7 @@ for line in lines:
 
 
 valid_ones = []
-
-    
+   
 
 def valid_passports():
     count = 0
@@ -41,7 +41,6 @@ def valid_passports():
             count += 1
             valid_ones.append(d)
     return count
-
 
 
 def check_string(s, length, lower, upper):
@@ -65,8 +64,6 @@ def check_color(s):
     rest = s[1:]
     chars = ['0']
     return len(rest) == 6 and all(map(lambda x: x in string.hexdigits, rest))
-
-
 
 
 def valid_data():
