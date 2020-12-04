@@ -62,7 +62,6 @@ def check_color(s):
     if not s.startswith("#"):
         return False
     rest = s[1:]
-    chars = ['0']
     return len(rest) == 6 and all(map(lambda x: x in string.hexdigits, rest))
 
 
